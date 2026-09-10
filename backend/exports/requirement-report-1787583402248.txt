@@ -1,0 +1,54 @@
+REQUIREMENT ANALYSIS REPORT
+========================================
+
+--- WITHOUT CLARIFICATION ---
+Functional Requirements:
+  [FR-1] The system shall automatically analyze candidate resumes for the software engineer role.
+  [FR-2] The system shall rank candidates based on relevance to the job description, experience, and overall profile strength.
+  [FR-3] The system shall include good companies, solid projects, and impactful work as part of the overall profile strength evaluation.
+  [FR-4] The system shall prioritize years of experience without strictly relying on it, allowing a strong fresher to be ranked better than someone with five years of average experience.
+
+Non-Functional Requirements:
+  [NFR-1] (Reliability) (VAGUE) The system shall be accurate enough so that HR can trust it.
+
+--- WITH CLARIFICATION ---
+Functional Requirements:
+  [FR-1] The system shall automatically shortlist candidates for the software engineer role.
+  [FR-2] The system shall rank candidates based on relevance to the job description, experience, and overall profile strength.
+  [FR-3] The system shall evaluate candidates using specific criteria including AI/ML, GenAI, and System Design.
+  [FR-4] The system shall output a ranked score, top N candidates, or pass/fail threshold.
+  [FR-5] The system shall perform semantic search on skills and keyword searches to determine relevance.
+  [FR-6] The system shall evaluate candidate experience based on total years of professional experience, industry-specific experience, and specific past titles.
+  [FR-7] The system shall account for profile strength indicators including good companies, solid projects, and impactful work.
+
+Non-Functional Requirements:
+  [NFR-1] (Reliability) (VAGUE) The system shall achieve an accuracy level that is 'good enough' so that HR can trust it.
+  [NFR-2] (Fairness) The ranking algorithm shall not strictly prioritize years of experience, allowing strong freshers to be ranked higher than candidates with more average years of experience.
+
+--- QUALITY EVALUATION ---
+{
+  "without_clarification": {
+    "completeness": 4,
+    "unambiguity": 4,
+    "testability": 3,
+    "consistency": 6,
+    "traceability": 5,
+    "overall_score": 4,
+    "notes": "Lacks specific evaluation criteria, outputs, and matching mechanisms, containing vague subjective statements."
+  },
+  "with_clarification": {
+    "completeness": 8,
+    "unambiguity": 7,
+    "testability": 7,
+    "consistency": 8,
+    "traceability": 8,
+    "overall_score": 8,
+    "notes": "Significantly improved specificity by detailing search methods, technical qualifications, and output formats."
+  },
+  "improvements": [
+    "Added specific technical qualifications such as AI/ML, GenAI, and System Design to evaluate candidate relevance.",
+    "Defined clear expected outputs including ranked scores, top N candidates, and pass/fail thresholds.",
+    "Specified matching mechanisms using semantic search and keyword search.",
+    "Detailed the specific factors for evaluating experience, including total years, industry-specific experience, and past titles."
+  ]
+}

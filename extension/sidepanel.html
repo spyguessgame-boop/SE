@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Requirement Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Requirement Analyzer</h1>
+    <div class="controls">
+      <button id="startDemoBtn">Start Demo Transcript</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </header>
+
+  <section id="status" class="status">Connecting to backend...</section>
+
+  <section class="panel">
+    <h2>Live Transcript</h2>
+    <div id="transcript" class="scroll-box"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Clarification Questions</h2>
+    <div id="questions" class="scroll-box"></div>
+  </section>
+
+  <section class="panel">
+    <button id="generateBtn">Generate & Compare Requirements</button>
+  </section>
+
+  <section class="panel" id="resultsSection" style="display:none;">
+    <h2>Results</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="without">Without Clarification</button>
+      <button class="tab-btn" data-tab="with">With Clarification</button>
+      <button class="tab-btn" data-tab="eval">Quality Evaluation</button>
+    </div>
+    <div id="tab-without" class="tab-content active"></div>
+    <div id="tab-with" class="tab-content"></div>
+    <div id="tab-eval" class="tab-content"></div>
+
+    <div class="export-row">
+      <span>Export:</span>
+      <button data-format="txt">TXT</button>
+      <button data-format="pdf">PDF</button>
+      <button data-format="docx">DOCX</button>
+    </div>
+  </section>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
